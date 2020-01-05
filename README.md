@@ -12,7 +12,7 @@
 
 ## GIt
 
-* Git 기초 
+* [Git 기초](*Git-기초)
 * Git 브랜치
 * Git 명령어
 
