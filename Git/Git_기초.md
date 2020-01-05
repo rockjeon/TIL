@@ -1,4 +1,4 @@
-## Git  기초 
+## Git  기초
 
 > 출처:  [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)
 >
@@ -84,4 +84,4 @@ $ git commit --amend
 * **Pull** & **Fech** & **push** 
   * `git fetch <remote>`  리모트 저장소에서 데이터를 가져옴/ 모든 브랜치를 로컬에서 접근 가능 Merge나 내용 살펴 볼 수 있음.
   * `git pull` 리모트 저장소 브랜치에서 데이터를 가져올 뿐 아니라 자동으로 Merge 가능 
-  * `git push <remote 저장소 이름> <브랜치이름>`  ex)`git push origin master` 
+  * `git push <remote 저장소 이름> <브랜치이름>`  ex) `git push origin master` 
