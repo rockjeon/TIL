@@ -14,7 +14,7 @@
 
 * [Git 기초](https://github.com/rockjeon/TIL/blob/master/Git/Git_기초.md)
 * [Git 브랜치](https://github.com/rockjeon/TIL/blob/master/Git/Git_브랜치.md)
-* Git 명령어
+* [Git 명령어](https://github.com/rockjeon/TIL/blob/master/Git/Git%20%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 ## AWS 
 
