@@ -3,7 +3,7 @@
 오늘 배운 모든 내용들을 정리하자!!
 
 ## Node
-* [JS 공부](https://github.com/rockjeon/TIL/blob/master/Grammar.js/grammar_js.md)
+* [JS 공부](/Grammar.js/grammar_js.md)
 * Express  만들기
   * Day 1
   * Day 2
