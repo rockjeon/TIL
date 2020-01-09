@@ -1,4 +1,4 @@
-# Rest API 기초
+# Rest API 기초 (진행중)
 
 > 출처: https://poiemaweb.com/js-rest-api
 
