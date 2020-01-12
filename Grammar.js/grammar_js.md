@@ -124,3 +124,4 @@ const array = ['nodejs',{},10,true];
 const [node, obj, , bool] = array;
 ~~~
 ### 프로미스
+

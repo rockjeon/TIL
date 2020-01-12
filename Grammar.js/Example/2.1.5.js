@@ -10,6 +10,7 @@ const candyMachine = {
 };
 const {getCandy, status:{count}} = candyMachine;
 
+
 const array = ['nodejs',{},10,true];
 const [node, obj, , bool] = array;
 
