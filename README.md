@@ -4,13 +4,9 @@
 
 ## Node
 * [JS 공부](/Grammar.js/grammar_js.md)
-* Express  만들기
-  * Day 1
-  * Day 2
-  * Day 3
-  * Day 4
 
-## GIt
+
+## Git
 
 * [Git 기초](https://github.com/rockjeon/TIL/blob/master/Git/Git%EA%B8%B0%EC%B4%88.md)
 * [Git 브랜치](https://github.com/rockjeon/TIL/blob/master/Git/Git_브랜치.md)
@@ -24,11 +20,11 @@
 
 * [자료구조 기초](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
 * [Javascript 자료구조 실습해보기](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/JS%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
-
+* [Javascript(알고리즘)](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5Bjavascript%5D.md)
 ## Book
 
 * [커리어스킬 - 존 손메즈](https://github.com/rockjeon/TIL/blob/master/Book/CareerSkill.md)
-* 
+
 
 
 
