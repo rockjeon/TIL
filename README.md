@@ -16,7 +16,8 @@
   * [TDD(node) 이해 및 환경구축 (강의4)](https://github.com/rockjeon/TIL/blob/master/node/TDD(node)%20%EC%9D%B4%ED%95%B4%20%EB%B0%8F%20%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95(%EA%B0%95%EC%9D%984).md)
 
   * [TDD로 API 서버개발 (강의5)](https://github.com/rockjeon/TIL/blob/master/node/TDD%EB%A1%9C%20API%20%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C(%EA%B0%95%EC%9D%985).md)
-
+  * 사용자목록 API 개발 (강의6)
+  * 코드 리펙토링 및 DB 연결 (강의7)
     
 
 
