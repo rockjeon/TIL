@@ -1,10 +1,9 @@
 # Today I Learned :bangbang:
 
 오늘 배운 모든 내용들을 정리하자!!
-
-## Node
+## Javascript
 * [JS 공부](/Grammar.js/grammar_js.md)
-
+## Node
 * Node.js 기반의 REST API 서버 개발-김정환님
 
   * [Node.js 기본구조 이해 (강의1)](https://github.com/rockjeon/TIL/blob/master/node/Node.js%20%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0%20%EC%9D%B4%ED%95%B4(%EA%B0%95%EC%9D%981).md)
@@ -31,7 +30,7 @@
 
 * aws certified - Cloud Practitioner
 
-## 자료구조
+## 자료구조/알고리즘
 
 * [자료구조 기초](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
 * [Javascript 자료구조 실습해보기](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/JS%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
