@@ -1,9 +1,19 @@
-# Today I Learned :bangbang:
+# Today I Learned :laughing:
 
-오늘 배운 모든 내용들을 정리하자!!
+오늘 배운 모든 내용들을 정리하자!! :man_student:
 ## Javascript
 * [JS 공부](/Grammar.js/grammar_js.md)
+* 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
+
+  * ch1. 함수형 자바스크립트 기본
+  * ch2. ES6에서의 순회와 이터러블/이터레이터 프로토콜
+  * ch3. 제너레이터와 이터레이터
+  * ch4. map , filter, reduce
+
+  
+
 ## Node
+
 * Node.js 기반의 REST API 서버 개발-김정환님
 
   * [Node.js 기본구조 이해 (강의1)](https://github.com/rockjeon/TIL/blob/master/node/Node.js%20%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0%20%EC%9D%B4%ED%95%B4(%EA%B0%95%EC%9D%981).md)
@@ -37,7 +47,7 @@
 * [Javascript(알고리즘)](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5Bjavascript%5D.md)
 ## Book
 
-* [커리어스킬 - 존 손메즈](https://github.com/rockjeon/TIL/blob/master/Book/CareerSkill.md)
+* 커리어스킬 - 존 손메즈
 
 
 
