@@ -6,9 +6,9 @@
 * 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
 
   * [ch1. 함수형 자바스크립트 기본](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch1.%20%ED%95%A8%EC%88%98%ED%98%95%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8.md)
-  * ch2. ES6에서의 순회와 이터러블/이터레이터 프로토콜
-  * ch3. 제너레이터와 이터레이터
-  * ch4. map , filter, reduce
+  * [ch2.ES6에서의 순회와 이터러블/이터레이터 프로토콜](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/ch2.%20ES6%EC%97%90%EC%84%9C%EC%9D%98%20%EC%88%9C%ED%9A%8C%EC%99%80%20%EC%9D%B4%ED%84%B0%EB%9F%AC%EB%B8%94%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0%20%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C.md)
+  * [ch3. 제너레이터와 이터레이터](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch3.%20%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80%20%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0.md)
+  * [ch4. map , filter, reduce](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch.4%20map%2C%20filter%2C%20reduce.md)
 
   
 
