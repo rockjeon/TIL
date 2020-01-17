@@ -1,11 +1,11 @@
-# ch2. ES6에서의 순회와 이터러블/이터레이터 프로토콜
+# Ch2. ES6에서의 순회와 이터러블/이터레이터 프로토콜
 
 * 2.1 기존과 달라진 ES6 에서의 리스트 순회
 * 2.2 Array, Set , Map
 * 2.3  사용자 정의 
 * 2.4 전개 연산자
 
-
+> 모든 코드는 `<script></script>` 안에서 작성한 코드 입니다.
 
 ## 2.1 기존과 달라진 ES6 에서의 리스트 순회
 
@@ -75,4 +75,36 @@ Arr, Set, Map 모두 같은 원리다.
 
 
 ## 2.3 사용자 정의
+
+~~~ javascript
+//iterable 에 대해서 좀 더 정확히 이해할수 있는 예제
+const iterable = {
+    [Symbol.iterator](){
+        let i = 3
+        return{
+            next() {
+                return i==0 ? {done: true }:{value:i--, done: false}
+            },
+        	[Symbol.iterator]() { return this } // well-formed iterable
+        }
+    }
+}
+let iterator = iterable[Symbol.iterator]()
+for (const a of iterable) log(a)
+
+~~~
+
+iterator 이면서 iterable인 객체를 well-formed iterable이라고 한다. 즉, 자기 자신의 상태를 기억할 수 있다는 뜻.
+
+## 2.4 전개 연산자
+
+* 전개 연산자도 이터러블/이터레이터 프로토콜을 따른다. 이터러블 / 이터레이터 프로토콜을 따르는 펼치는 연산자 라고 생각한다.
+
+Ex)
+
+~~~javascript
+const a = [1, 2]
+log(...a) // 1 2 
+log([...a...[3, 4]]) // 1 2 3 4 
+~~~
 
