@@ -4,9 +4,9 @@
 ## Javascript
 * Js (ES6) 혼자서도 잘해요
 
-  * 혼자서도 잘해요 (1)
+  * [혼자서도 잘해요(1)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(1).md)
   
-  * 혼자서도 잘해요 (2)
+  * [혼자서도 잘해요(2)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(2).md)
 
 * 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
 
@@ -15,8 +15,8 @@
   * [ch3. 제너레이터와 이터레이터](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch3.%20%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80%20%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0.md)
   * [ch4. map , filter, reduce](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch.4%20map%2C%20filter%2C%20reduce.md)
   * [ch5.코드를 값으로 다루어 표현력 높이기(go,pipe,curry)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch.5%20%EC%BD%94%EB%93%9C%EB%A5%BC%20%EA%B0%92%EC%9C%BC%EB%A1%9C%20%EB%8B%A4%EB%A3%A8%EC%96%B4%20%ED%91%9C%ED%98%84%EB%A0%A5%20%EB%86%92%EC%9D%B4%EA%B8%B0.md)
-* ch6.장바구니 예제
-  * ch7.지연성(1)
+  * [ch6.장바구니 예제](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch6%20%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88%20%EC%98%88%EC%A0%9C.md)
+  * [ch7.지연성(1)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch7.%20%EC%A7%80%EC%97%B0%EC%84%B1(1).md)
   
   
 
