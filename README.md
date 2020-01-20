@@ -1,8 +1,13 @@
-# Today I Learned :laughing:
+# Today I Learned!!
 
 오늘 배운 모든 내용들을 정리하자!! :man_student:
 ## Javascript
-* [JS 공부](/Grammar.js/grammar_js.md)
+* Js (ES6) 혼자서도 잘해요
+
+  * 혼자서도 잘해요 (1)
+  
+  * 혼자서도 잘해요 (2)
+
 * 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
 
   * [ch1. 함수형 자바스크립트 기본](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch1.%20%ED%95%A8%EC%88%98%ED%98%95%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B8%B0%EB%B3%B8.md)
@@ -10,7 +15,9 @@
   * [ch3. 제너레이터와 이터레이터](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch3.%20%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80%20%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0.md)
   * [ch4. map , filter, reduce](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch.4%20map%2C%20filter%2C%20reduce.md)
   * [ch5.코드를 값으로 다루어 표현력 높이기(go,pipe,curry)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20ES6%2B/Ch.5%20%EC%BD%94%EB%93%9C%EB%A5%BC%20%EA%B0%92%EC%9C%BC%EB%A1%9C%20%EB%8B%A4%EB%A3%A8%EC%96%B4%20%ED%91%9C%ED%98%84%EB%A0%A5%20%EB%86%92%EC%9D%B4%EA%B8%B0.md)
-
+* ch6.장바구니 예제
+  * ch7.지연성(1)
+  
   
 
 ## Node
@@ -45,7 +52,7 @@
 
 * [자료구조 기초](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
 * [Javascript 자료구조 실습해보기](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/JS%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
-* [Javascript(알고리즘)](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5Bjavascript%5D.md)
+* [Javascript(알고리즘 풀때 유용함)](https://github.com/rockjeon/TIL/blob/master/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%5Bjavascript%5D.md)
 * javascript 로 하는 자료구조와 알고리즘
 ## Book
 

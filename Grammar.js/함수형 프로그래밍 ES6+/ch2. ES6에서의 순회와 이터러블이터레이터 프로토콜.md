@@ -39,9 +39,9 @@ for(const a of set )log(a)
 
 //Map
 const map = new Map ([['a', 1], ['b' ,2], ['c',3]])
-for(const a of map.keys() log(a)
-for(const a of map.values()log(a)
-for(const a of map.entries() log(a)
+for(const a of map.keys() log(a) // a, b, c
+for(const a of map.values()log(a) //1, 2, 3 
+for(const a of map.entries() log(a)//['a', 1], ['b' ,2], ['c',3]
 ~~~
 
 * ES6 에서의 순회는 위에 순회하는 ES5 의 for 문이랑 같은 원리로 순회하는 것 이 아니다!!
