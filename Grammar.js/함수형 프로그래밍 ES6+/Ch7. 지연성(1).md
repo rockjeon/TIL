@@ -1,6 +1,7 @@
 # Ch7. 지연성(1)
 
-* range와 느긋한 L.range 
+* 7.1 range와 느긋한 L.range 
+* take
 
 > 모든 코드는 html `<script></script>` 에서 실습했습니다.
 
@@ -56,6 +57,22 @@ function test(name, time, f) {
 }
 test('range', 10, () => reduce(add, range(1000000)))// 약 489.68...
 test('L.range', 10, () => reduce(add, L.range(1000000))) // 약 257.204...
+~~~
+
+## 7.2 take
+
+* take 함수를 통해 짤라서 출력 할수 있다. 이터러블 프로토콜을 따르고, 이터러블을 받아서  안에 값을 next 를 통해 순회해서 꺼내서 push 하는 로직이다.  조합성이 좋다. 효율적이다.
+
+~~~javascript
+const take = (l, iter) => {
+    let res = []
+    for (const a of iter) {
+        res.push(a)
+        if (res.length == l ) return res
+    }
+    return res
+}
+log(take5, range(100))
 ~~~
 
 
