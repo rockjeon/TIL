@@ -5,8 +5,8 @@
 * Js (ES6) 혼자서도 잘해요
 
   * [혼자서도 잘해요(1)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(1).md)
-  
   * [혼자서도 잘해요(2)](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(2).md)
+  * 면접준비-js
 
 * 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
 
