@@ -140,5 +140,29 @@ console.log(doubled) // [2, 4, 6]
 
 가장 큰 차이점은 배열을 반환 한다는 것이다. 결과가 필요하지만 원본 배열을 변경하고 싶지 않다면, 좋은 선택이 될 것 이다. 그러나 단순히 배열을 반복할 필요가 있다면, forEach가 좋은 선택이 될 것 이다.
 
+### function Person(){}, 
 
+### var person = Person(), 
+
+### var person = new Person()의 차이점은 무엇인가요?
+
+이 질문은 굉장해 애매합니다. 질문의 의도에 대한 저의 최선의 추측은 JavaScript의 생성자에 대해 묻는 것입니다. 엄밀히 말하면, `function Person(){}`은 정상적인 함수 선언일 뿐입니다. 이 컨벤션은 함수생성자로 사용하기 위해 함수이름에 PascalCase를 사용합니다.
+
+`var person = Person()`은 생성자가 아니며 `Person`을 함수로 호출합니다. 함수를 생성자로 사용하려는 경우에 이렇게 호출하는 것은 일반적인 실수입니다. 일반적으로 생성자는 아무것도 반환하지 않으므로 일반 함수처럼 생성자를 호출하면 `undefined`가 반환되고 지정된 변수에 할당됩니다.
+
+`var person = new Person()`은 `Person.prototype`을 상속받은 `new` 연산자를 사용하여 `Person` 객체의 인스턴스를 생성합니다. 또 다른 방법은 `Object.create`를 사용하는 것입니다: `Object.create(Person.prototype)`.
+
+```javascript
+function Person(name) {
+  this.name = name
+}
+
+var person = Person('John')
+console.log(person) // undefined
+console.log(person.name) // Uncaught TypeError: Cannot read property 'name' of undefined
+
+var person = new Person('John')
+console.log(person) // Person { name: "John" }
+console.log(person.name) // "john"
+```
 
