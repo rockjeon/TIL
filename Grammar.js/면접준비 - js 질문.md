@@ -75,3 +75,70 @@ obj.printThis()
 ### 클로저는 무엇?
 
 클로저는 함수와 함수가 선언된 어휘적 환경의 조합이다. 우선 클로저를 이해하기 전에 자바스크립트가 어떻게 변수의 유효범위를 지정하는지 알아야한다.
+
+~~~javascript
+function init () {
+    var name = 'rockjeon' // name은 init에 의해 생성된 지역 변수
+    function displayName () { //display는 내부 함수 클로저!!!
+        console.log(name)
+    }
+    displayName()
+}
+init() // rockjeon (displayName 함수 내의 alert문이 부모함수에서 정의한 변수 name의 값을 성공적으로 출력한다.)
+~~~
+
+자.. init 은 지역변수 name과 함수 displayName을 생성
+
+displayName은 init 안에 정의된 내부 함수 -> init 함수 본문에서만 사용가능
+
+여기서 중요한건 displayName 내부엔 자신만의 지역 변수가 없다. 그런데 함수 내부에서 외부 함수의 변수에 접근할 수 있다. -> 만약 displayName이 자신만의 name 변수를 가질려면 this.name을 사용했을 것 이다.
+
+~~~javascript
+function makeFunc () {
+    const name = "rockjeon"
+    function displayName () {
+        console.log(name)
+    }
+    return displayName
+}
+
+const myFunc = makeFunc() 
+
+myFunc() // rockjeon 
+~~~
+
+displayName 함수가 실행되기 전에 외부함수 makeFunc로 부터 리턴되어 myFunc 변수에 저장된다. 몇몇 프로그래밍 언어는 makeFunc 함수 실행이 끝나면 name 변수에 더 이상 접근할 수 없게 될거라 생각 할 수 있으나 자바스크립트는 다르다. 그 이유는 함수를 리턴하고, 리턴하는 함수가 클로저를 형성하기 때문이다. **클로저는 함수와 함수가 선언된 어휘적 환경 조합니다.** 이 환경은 클로저가 생성된 시점의 유효 범위 내에 있는 모든 지역 변수로 구성된다. 즉 , 위의 예시로 예를 들자면 myFunc은 makeFunc이 실행될 때 생성된 displayName 함수의 인스턴스에 대한 참조! displayName의 인스턴스는 변수 name이 있는 어휘적 환경에 대한 참조! 이런 이유들로 myFunc 이 호출될때 변수 name은 사용 할 수 있는 상태로 남는다.
+
+### forEach() & map()
+
+forEach()
+
+* 배열의 요소를 반복
+* 각 요소에 대해 콜백을 실행
+* 값을 반환하지 않음
+
+~~~javascript
+const a = [1, 2, 3]
+const doubled = a.forEach((num,index) => {
+    //num나 index로 무언가 합니다.
+}
+console.log(doubled) // undefined
+~~~
+
+map()
+
+* 배열의 요소를 반복
+* 각 요소에서 함수를 호출하여 결과로 새 배열을 작성하여 각 요소를 새 요소에 매핑
+
+~~~javascript
+const a = [1, 2, 3]
+const doubled = a.map(num => {
+     return num * 2
+})
+console.log(doubled) // [2, 4, 6]
+~~~
+
+가장 큰 차이점은 배열을 반환 한다는 것이다. 결과가 필요하지만 원본 배열을 변경하고 싶지 않다면, 좋은 선택이 될 것 이다. 그러나 단순히 배열을 반복할 필요가 있다면, forEach가 좋은 선택이 될 것 이다.
+
+
+
