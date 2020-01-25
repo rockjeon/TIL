@@ -66,10 +66,9 @@
 * 노드는 기본적으로 비동기로 동작함.
 
   * node를 하려면기본적으로 비동기에 대해 고민할 필요가 있다.
+* readFile() vs readFileSync() [ 동기 vs 비동기]
 
-* readFile() vs readFileSync() 
-
-  ​	1. readFileSync()  => 동기
+1. readFileSync()  => 동기
 
 ~~~javascript
 //test.txt
@@ -83,7 +82,7 @@ const file = fs.readFileSync('test.txt',{
 console.log(file) // 테스트 파일입니다. 
 ~~~
 
-		2. redFile()  =>비동기
+​	2. redFile()  =>비동기
 
 ~~~javascript
 EX1)

@@ -4,9 +4,9 @@
 
 > 참고: https://github.com/rockjeon/front-end-interview-handbook
 
-* 이벤트 위임
-* this
-* 프로토타입 상속 
+* **자바스크립트**: 객체 기반의 스크립트 프로그래밍 언어이며 node 와 같은 런타임 환경과 같이 서버사이드 네트워킹 프로그래밍에도 사용된다. 특징은 빠르게 배우고 작성하기 위해 고안되었으며, 짧은 소스 코드 파일이나 REPL로 상호작용하는데 적합.
+* **Node.js** : 확장성 있는 네트워크 앱 (server-side)에 사용되는 소프트웨어 플랫폼이며 Non-blocking I/O와 단일 스레드(스레드는 CPU의 이용의 기본 단위다.프로세스 내에서 프로그램 명령을 실행하는 기본 단위이자 흐름, 개체) 이벤트루프를 통한 높은 처리 성능을 가짐 
+  * 참고 : 이벤트 루프는 콜 스택을 모니터하고 태스크 큐에서 수행할 작업이 있는지 확인하는 단일 스레드 루프입니다. 콜 스택이 비어 있고 태스크 큐에 콜백 함수가 있는 경우, 함수는 큐에서 제거되고 실행될 콜 스택으로 푸시됩니다.
 
 ### 이벤트 위임
 
@@ -25,6 +25,8 @@
 
 ### this
 
+> 참고: [https://github.com/FEDevelopers/tech.description/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-this%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%A4%EB%AA%85-1](https://github.com/FEDevelopers/tech.description/wiki/자바스크립트에서-사용되는-this에-대한-설명-1)
+
 * 함수를 호출할 때 `new` 키워드를 사용하는 경우, 함수 내부에 있는 `this`는 완전히 새로운 객체입니다.
 
 ~~~javascript
@@ -41,7 +43,7 @@ new exmaple() ;
 
 
 
-* apply`, `call`, `bind 가 함수의 호출/생성에 사용되는 경우, 함수 내의 this는 인수로 전달된 객체입니다.
+* apply, call, bind 가 함수의 호출/생성에 사용되는 경우, 함수 내의 this는 인수로 전달된 객체입니다.
 
 * obj.method()와 같이 함수를 메서드로 호출하는 경우, `this`는 함수가 프로퍼티인 객체 (이름과값 또는 object reference - 프로퍼티 값이 변한 후에도 object는 그대로 남아있다) 입니다.
 
@@ -84,7 +86,7 @@ function init () {
     }
     displayName()
 }
-init() // rockjeon (displayName 함수 내의 alert문이 부모함수에서 정의한 변수 name의 값을 성공적으로 출력한다.)
+init() // rockjeon (displayName 함수 내의 console.log 문이 부모함수에서 정의한 변수 name의 값을 성공적으로 출력한다.)
 ~~~
 
 자.. init 은 지역변수 name과 함수 displayName을 생성
@@ -165,4 +167,206 @@ var person = new Person('John')
 console.log(person) // Person { name: "John" }
 console.log(person.name) // "john"
 ```
+
+### 호스트 객체와 내장객체의 차이점
+
+* 내장 객체: ECMAScript 사양에 정의된 javascript 언어의 일부인 객체이다. (String, Math, RegExp, Object, Function)
+* 호스트 객체: 런타임 환경에 의해 제공(window, XMLHTTPRequest)
+
+### 호이스팅(Hoisting)
+
+변수 선언의 동작을 설명하는데 사용되는 용어이다. `var` 키워드로 선언되거나 초기화된 변수는 현재 스코프(scope) 의 최상위까지 옮겨니다. 그러나 선언문만 호이스팅 되고 할당은 그대로 있게됨
+
+~~~javascript
+// var 선언이 호이스팅됩니다
+console.log(foo) // undefined
+var foo = 1
+console.log(foo) // 1
+
+// let/const 선언은 호이스팅되지 않습니다.
+console.log(bar) // ReferenceError: bar is not defined
+let bar = 2
+console.log(bar) // 2
+~~~
+
+함수선언 : 함수 몸체가 호이스팅
+
+변수선언형대: 작성된 함수 표현식은 변수 선언만 호이스팅
+
+~~~javascript
+// 함수 선언
+console.log(foo) // [Function: foo]
+foo() // 'FOOOOO'
+function foo() {
+  console.log('FOOOOO')
+}
+console.log(foo) // [Function: foo]
+
+// 함수 표현식
+console.log(bar) // undefined
+bar() // Uncaught TypeError: bar is not a function
+var bar = function() {
+  console.log('BARRRR')
+}
+console.log(bar) // [Function: bar]
+~~~
+
+### == 와 === 의 차이점은?
+
+* == 는 추상동등 연산자 : 타입 변환이 필요한 경우 타입 변환을 한 후에 동등한지 비교 할 것 입니다.
+
+* ===는 완전 동등 연산자 : 타입 변환을 하지 않으므로 두 값이 같은 타입이 아닌경우 false 
+
+~~~ javascript
+1 == '1' //true
+1 == [1] // true
+0 == '' // true
+0 == '0' //true
+0 == false //true
+~~~
+
+### Callback 대신에 Promise를 사용할 때의 장점과 단점
+
+장점
+
+* 가독성 (콜백 지옥을 피할 수 있음)
+* .then을 이용하여 연속적인 비동기 코드 작성 가능 (Ex1)
+* promise.all()을 사용해 병렬 비동기 코드를 쉽게 작성(Ex2)
+
+~~~javascript
+//Ex1)
+function fidAndSaveUSer(Users){
+    Users.find({},(err,user)=>{ // 첫번째 콜백
+        if(err){
+            return console.error(err);
+        }
+        user.name = 'rockjeon'
+        user.save((err)=>{ // 두번째 콜백
+            if(err) {
+                return console.error(err);
+
+            }
+            Users.findOne({gender: 'm'}, (err, user)=>{
+                //생략
+            })
+        })
+    })
+}
+// promise 사용
+function findAndSaveUser(Users){
+    Users.findone({})
+    .then((user)=>{
+        user.name = 'rockjeon'
+        return user.save()
+    })
+    .then((user)=>{
+        return Users.findOne({gender:'m'})
+    })
+    .then ((user)=>{
+        //생략
+    })
+    .catch(err => {
+        console.error(err);
+    })
+}
+
+~~~
+
+~~~javascript
+//Ex2
+
+//promise 여러개를 한번에 실행
+const promise1 = Promise.resolve('성공1')
+const promise2 = Promise.resolve('성공2')
+Promise.all([promise1, promise2])
+    .then((result) =>{
+        console.log(result)
+    })
+    .catch((error)=>{
+        console.error(error)
+    })
+
+~~~
+
+단점
+
+* 약간 복잡함
+* ES2015를 지원하지 않는 이전 브라우저 사용시 불편함
+
+### 오브젝트 속성 및 배열 항목을 반복할때 사용하는 언어
+
+1. 오브젝트의 경우
+
+* for in : 상속된 속성도 반복된다. (obj.hasOwnProperty(property)) 체크해야함
+* Object.keys() - Object.keys(obj).forEach(function  (property) {....}). Object.keys()는 전달하는 객체의 열거 가능한 모든속성을 나열하는 정적 메서드
+* Object.getOwnPropertyNames()- Object.getOwnPropertyNames(obj).forEach(function (property) {....}). Object.getOwnPropertyNames() 는 전달하는 객체의 열거 가능한 속성과 열거불가능한 모든 속성을 나열하는 정적 메서드
+
+2. 배열의 경우
+
+* for 반복 -for(var i = 0; i <arr.length ; i ++) var 이 함수 스코프로 블록 스코프가 아니다. 대부분 블록 스코프의 반복자 변수를 원할 것이란점. let 이 추가 됐고 , 이를 대신 사용할 것을 권장 
+* forEach -arr.forEach(function (el, index) { ... }) 필요한 부분이 배열의 요소라면 index를 필요가 없기 때문에 편리하다.
+* for- of : ES6는 string array map set 등과 같은 이터러블프로토콜을 준수하는 객체를 반복 할 수 있게 해준다. (for- of 는 루프에서 빠져 나올 수도 있고 더 한결하다.)
+
+~~~javascript
+//Arr 
+const arr = [1,2,3]
+for(const a of arr )console.log(a)
+
+//Set
+const set = new Set([1,2,3])
+for(const a of set )console.log(a)
+
+//Map
+const map = new Map ([['a', 1], ['b' ,2], ['c',3]])
+for(const a of map.keys())console.log(a)// a, b, c
+for(const a of map.values())console.log(a) //1, 2, 3 
+for(const a of map.entries())console.log(a) 
+//['a', 1], ['b' ,2], ['c',3]
+~~~
+
+### 동기 & 비동기 함수의 차이점
+
+동기함수는 블로킹이고 비동기는 블로킹이 아니다. 동기함수에서는 다음 명령문이 실행되기 전에 앞 명령문이 완료됩니다. 즉, 명령문의 순서대로 정확하게 평가되고 명령문 중 하나가 매우 오래 걸린다면 프로그램 일시 중지 됩니다.
+
+반면에 비동기 함수는 일반적으로 파라미터를 통해서 콜백을 받고, 비동기 함수가 호출 된후 즉시 다음 줄 실행이 계속 된다. 예를들어 살펴 보면
+
+1. readFileSync()  => 동기
+
+~~~javascript
+//test.txt
+테스트 파일입니다.
+//index.js
+
+const fs = require('fs')
+const file = fs.readFileSync('test.txt',{
+    encoding:'utf8'
+})
+console.log(file) // 테스트 파일입니다. 
+~~~
+
+​	2. redFile()  =>비동기
+
+~~~javascript
+EX1)
+const fs = require('fs')
+
+const file = fs.readFile('test.txt', {
+    encodin:'utf8'
+}) //readFile 은 Worker 한테 job을 넘겨주고 다음 evevnt (console.log) 를 기다린다. 즉, 파일를 다 읽지도 않았고, worker로 넘기고 console.log 를 실행 시키려 한다.
+	
+console.log(file) // Undefined
+
+EX2)
+const fs = require('fs')
+
+const callback = (err, file)=> {
+    console.log(file)
+}
+
+fs.readFile('test.txt', {
+    encodin:'utf8'
+},callback) 
+
+// EX1) 의 해결방법은 callback 함수: EventLoop가 파일을 읽으라고 했고 , worker한테 위임을 하고, EventLoop이 다른 event를 수신 하고 있을때 Worker는 다 읽으면 다시 EvnetLoop한테 알려줘야 하는데 그 방법을 callback 함수를 사용한다.      
+~~~
 
