@@ -7,12 +7,10 @@
   * [혼자서도 잘해요(1) ES6편](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(1).md)
   * [혼자서도 잘해요(2) ES6 편](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%ED%98%BC%EC%9E%90%EC%84%9C%EB%8F%84%20%EC%9E%98%ED%95%B4%EC%9A%94(2).md)
   * [면접준비-js편](https://github.com/rockjeon/TIL/blob/master/Grammar.js/%EB%A9%B4%EC%A0%91%EC%A4%80%EB%B9%84%20-%20js%20%EC%A7%88%EB%AC%B8.md)
-<<<<<<< HEAD
   * 혼자서도 잘해요 - Angular편
   * 혼자서도 잘해요 - php 편
-=======
   * 혼자서도 잘해요 - Angular
->>>>>>> d042edc14bd7556efee6063a73ee1915aae4de05
+
 
 * 함수형 프로그래밍 (ES6+) - 강의( 유인동 강사님 ) [진행중]
 
