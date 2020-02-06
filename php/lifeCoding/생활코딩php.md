@@ -703,9 +703,11 @@ Array
 </head>   
 <body>
 <?php
-ini_set("display_errors", "1");
-$uploaddir = 'C:\BitNami\wampstack-5.4.20-0\apache2\htdocs\upload\file\\';
+ini_set("display_errors", "1"); # 설정 runtime , 1 = on 
+$uploaddir = 'C:\BitNami\wampstack-5.4.20-0\apache2\htdocs\upload\file\\'; 
+ #윈도우용입니다. (OS 마다 달라 질 수 있다.)
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+# basename : 파일 이름 , 일종의 보완과 관련이 있다.
 echo '<pre>';
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
     echo "파일이 유효하고, 성공적으로 업로드 되었습니다.\n";
@@ -719,4 +721,84 @@ print "</pre>";
 </body>
 </html>
 ~~~
+
+* $_FILE:임시 디렉토리 (php메뉴얼) -> boolean
+
+* print_r : var_dump()
+
+### 15. 이미지 다루기
+
+* 설명은 주석
+
+~~~php
+<?php
+header("Content-type: image/png");
+$string = $_GET['text'];
+$im     = imagecreatefrompng("button.png"); # 'png' 의 형식을 갖고 올거다 라는 내부 함수
+$orange = imagecolorallocate($im, 60, 87, 156); # 첫번째 인자: 이미지의 식별자, RGB(red, green, blue)
+$px     = (imagesx($im) - 7.5 * strlen($string)) / 2;
+# 이미지 안에 텍스트를 가운데로 두기 위한 계산.
+imagestring($im, 4, $px, 9, $string, $orange); # 이미지에 글씨를 쓸거다! 
+imagepng($im); # 전송
+imagedestroy($im); # 이미지 삭제
+
+?>
+~~~
+
+### 16.문자열 처리
+
+~~~php
+<?php
+echo 'hello world';
+echo "hello world";
+?>
+~~~
+
+~~~php
+<?php
+echo 'hello \'world\''; # 따움표 안에 따움표 넣기 위한 escaping
+echo "hello \"world\"";
+?>
+~~~
+
+줄바꿈
+
+~~~php
+<?php
+echo "hello world\n";
+echo 'hello world\n';
+?>
+~~~
+
+문자열 안에서 변수를 사용 {. }
+
+~~~php
+<?php
+$a = array('hello', 'world');
+echo "생활코딩의 공식인사는 {$a[0]} {$a[1]}입니다"; # ("")
+echo '생활코딩의 공식인사는 '.$a[0].' '.$a[1].'입니다'; #('')
+?>
+~~~
+
+문자와 문자를 더 할때는 '.' 를 사용한다 (마침표)
+
+~~~php
+<?php
+$a = "생활";
+$b = "코딩";
+echo $a.$b;
+?>
+~~~
+
+### 17.정규 표현식 (추후에 다시 공부 )
+
+* 문자를 처리할때 문자를 검색하고 치환하는 수단.(일종의 언어)
+
+공부순서
+
+1. https://opentutorials.org/module/622/5143
+
+2. https://opentutorials.org/course/62/5141
+
+### 18. 데이터베이스
 
