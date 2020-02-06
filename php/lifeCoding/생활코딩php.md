@@ -661,3 +661,62 @@ Array
 
 ### 14.파일 업로드
 
+~~~html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>   
+<body>
+<form enctype="multipart/form-data" action="1.php" method="POST">
+   <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+   <input name="userfile" type="file" />
+   <input type="submit" value="upload" />
+</form>
+</body>
+</html>
+~~~
+
+* input name="userfile" type="file" /
+
+
+
+* input type="hidden" name="MAX_FILE_SIZE" value="30000" /
+  * `input type="hidden` : 화면에 어떠한 부분도 표현되지 않고, 서버쪽으로 데이터 전송(필요에 의해서 서버에 보내는거)
+  * `name="MAX_FILE_SIZE` : 사용자의 파일 크기
+
+(순서)
+
+1. input type="hidden" name="MAX_FILE_SIZE" value="30000" /
+2.  input name="userfile" type="file" /
+
+* form tag : 확인하기
+
+**과정을 알아보자**
+
+~~~php
+#1.php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>   
+<body>
+<?php
+ini_set("display_errors", "1");
+$uploaddir = 'C:\BitNami\wampstack-5.4.20-0\apache2\htdocs\upload\file\\';
+$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+echo '<pre>';
+if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+    echo "파일이 유효하고, 성공적으로 업로드 되었습니다.\n";
+} else {
+    print "파일 업로드 공격의 가능성이 있습니다!\n";
+}
+echo '자세한 디버깅 정보입니다:';
+print_r($_FILES);
+print "</pre>";
+?>
+</body>
+</html>
+~~~
+
