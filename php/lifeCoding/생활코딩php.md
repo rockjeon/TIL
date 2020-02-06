@@ -800,5 +800,140 @@ echo $a.$b;
 
 2. https://opentutorials.org/course/62/5141
 
-### 18. 데이터베이스
+### 18. 데이터베이스 (mysql)
+
+> 참고: https://opentutorials.org/course/62/5155
+
+### 19.PDO (우선 참고로 알아두자)
+
+PDO(PHP Data Objects)란 여러가지 데이터베이스를 제어하는 방법을 표준화시킨 것이다. 데이터베이스는 다양한 종류가 있다. 그리고 종류에 따라서 서로 다른 드라이브를 사용해 왔는데 드라이브의 종류에 따라서 데이터베이스를 제어하기 위한 API가 달랐다. PDO를 사용하면 동일한 방법으로 데이터베이스를 제어할 수 있다.
+
+### 20.쿠키와 세션
+
+* 쿠키 (보완상 신뢰할수 없음)
+  * 사용자의 data를 저장.
+  * 쿠키 : client 쪽 저장
+  * setCookie
+  * $_COOKIE
+
+~~~php
+#cookie1.php
+<?php
+    setCookie('cookie1', '생활코딩');
+    setCookie('cookie2', time(), time()+60);
+?>
+~~~
+
+~~~php
+#cookie2.php
+<?php
+echo $_COOKIE['cookie1']."<br />";
+echo time()-$_COOKIE['cookie2'];
+?>
+~~~
+
+* 세션
+  * session
+  * SID(session ID)를 식별자로 서버에 데이터를 저장
+  * SID로는 쿠키나 도메인 파라미터를 사용
+  * session_start(); 로 시작, 스크립트의 최상단에 위치해야 함
+  * $_SESSION
+  * 데이터는 서버 내에 파일이나 DB에 저장 함
+  * 주로 사용자 인증시에 사용함
+
+~~~php
+<?php
+session_save_path('./session'); # 저장되는 위치.
+session_start(); # 로직의 초반에 써야함.
+$_SESSION['title'] = '생활코딩';
+?>
+~~~
+
+
+
+~~~php
+<?php
+ini_set("display_errors", "1");
+session_save_path('./session');
+session_start();
+echo $_SESSION['title'];
+echo file_get_contents('/ex.u/cep/cep/html/egoing/session/session/sess_'.session_id());
+?>
+~~~
+
+### 21. 예제로 로그인과 로그아웃 기능
+
+~~~html
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    </head>
+    <body>
+        <form action="login_process.php" method="POST">
+            <p><label>아이디</label><input type="text" name="id" /></p>
+            <p><label>비밀번호</label><input type="text" name="pwd" /></p>
+ 
+        <input type="submit" />
+        </form>
+    </body>
+</html>
+</html>
+~~~
+
+~~~php
+<?php
+session_start();
+$id = 'rockjeon';
+$pwd = 'rockjeonrockjeon';
+if(!empty($_POST['id']) && !empty($_POST['pwd'])){
+    if($_POST['id'] == $id && $_POST['pwd'] == $pwd){
+        $_SESSION['is_login'] = true;
+        $_SESSION['nickname'] = 'sangwook';
+        header('Location: ./session.php');
+        exit;
+    }
+}
+echo '로그인 하지 못했습니다.';
+?>
+~~~
+
+~~~php
+<?php
+session_start();
+if(!isset($_SESSION['is_login'])){
+    header('Location: ./login.html');
+}
+?>
+<html>
+    <body>
+        <?php echo $_SESSION['nickname'];?>님 환영합니다<br />
+        <a href="./logout.php">로그아웃</a>    
+    </body>
+</html>
+~~~
+
+~~~php
+<?php
+ini_set("display_errors", "1");
+session_start();
+session_destroy();
+header('Location: ./login.html');
+?>
+~~~
+
+### 22. 디버깅
+
+* 버그: 의도치 않게 프로그램의 오동작
+* 디버깅: 오류 찾는거
+* 디버거: 디버그 찾는법
+
+**log**
+
+* console.log 같은거 같다.
+
+**xdebug**
+
+
+
+
 
