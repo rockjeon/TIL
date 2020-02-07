@@ -998,3 +998,45 @@ var_dump($odata->count());
 ?>
 ~~~
 
+### 24. 클래스와 메소드 그리고 인스턴스
+
+~~~php
+<?php
+class MyFileObject{
+    function isFile(){
+        return true;
+    }
+}
+$file = new MyFileObject();
+var_dump($file-> isFile());
+?>
+
+~~~
+
+* 인스턴스 변수 만들기. 
+
+~~~php
+<?php
+class MyFileObject{
+    function isFile(){
+        return is_file($this->filename);
+    } 
+} 
+# this 에 대해 이해하기. $this->filename : instance variable
+
+$file = new MyFileObject();
+$file->filename = 'data.txt';
+var_dump($file-> isFile());
+
+$file2 = new MyFileObject();
+$file2->filename = 'data2.txt';
+var_dump($file->isFile());
+?>
+
+
+~~~
+
+* Constructor
+
+클래스를 이용해서 인스턴스를 만드는것.
+
