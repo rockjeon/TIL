@@ -931,9 +931,70 @@ header('Location: ./login.html');
 
 * console.log 같은거 같다.
 
-**xdebug**
+**xdebug** ( 좀 더 공부해야함)
+
+<설치..>
+
+> 참고:  http://www.apaddedcell.com/easy-php-debugging-ubuntu-using-xdebug-and-vim
 
 
 
+### 23. 함수와 객체의 비교
 
+함수방식
+
+~~~php
+<h1>Function</h1>
+<?php
+var_dump(is_file('data.txt'));
+var_dump(is_dir('data.txt'));
+var_dump(file_get_contents('data.txt'));
+file_put_contents('data.txt', rand(1,100));
+?>
+~~~
+
+객체방식
+
+~~~php
+<h1>Object</h1>
+<?php
+$file = new SplFileObject('data.txt');
+var_dump($file->isFile());
+var_dump($file->isDir());
+var_dump($file->fread($file->getSize()));
+$file->fwrite(rand(1,100));
+?> 
+~~~
+
+* SplFileObject : class
+
+* new SplFileObject : instance ($file)
+
+* isFile, isDir,fread : method(function)
+
+* data.txt : state (상태)
+
+ex)
+
+~~~php
+<h1>Function style</h1>
+<?php
+$adata = array('a', 'b', 'c');
+array_push($data, 'd');
+foreach($adata as $item){
+    echo $item.'<br>';
+}
+var_dump(count($data));
+?>
+
+<h1>Object style</h1>
+<?php
+$odata = new ArrayObject(array('a','b','c'));
+$odata->append('d');
+foreach($odata as $item){
+    echo $item.'<br>';
+}
+var_dump($odata->count());
+?>
+~~~
 
